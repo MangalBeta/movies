@@ -26,7 +26,7 @@
     "react-bootstrap-icons": "^1.11.5",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.3",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "react-slick": "^0.30.3",
     "slick-carousel": "^1.8.1",
     "styled-components": "^6.1.8",
@@ -36,8 +36,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "server": "node server.js"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -65,5 +64,8 @@
   "main": "server.js",
   "keywords": [],
   "author": "",
+  "engines": {
+    "node": "20"
+  },
   "license": "ISC"
 }

@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Container, Row, Col, Card, Button, Badge, Spinner } from "react-bootstrap";
 import { Star, ExternalLink } from 'lucide-react';
+import { DATA_BASE_URL } from "./HomePage";
 
 const SingleMovie = () => {
     const { id } = useParams();
@@ -15,7 +16,7 @@ const SingleMovie = () => {
         const fetchMovie = async () => {
             try {
                 setLoading(true);
-                const response = await axios.get(`http://localhost:3001/movies/${id}`);
+                const response = await axios.get(`${DATA_BASE_URL}/${id}`);
                 setMovie(response.data);
             } catch (err) {
                 setError("Failed to load movie details");

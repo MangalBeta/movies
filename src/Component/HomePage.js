@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '../../src/App.css'; // Import the CSS file (if created separately)
 import { Search } from 'react-bootstrap-icons';
-
+export const DATA_BASE_URL ='http://localhost:3000/api/movies'
 const HomePage = () => {
   const [movies, setMovies] = useState([]); // Fetched movies from the API
   const [searchQuery, setSearchQuery] = useState(''); // Search query input
@@ -28,7 +28,7 @@ const HomePage = () => {
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/movies"); // Replace with your API endpoint
+        const response = await axios.get(DATA_BASE_URL); // Replace with your API endpoint
         if(response?.data?.[0]?.movies.length > 0){
           setMovies(response?.data?.[0]?.movies);
         }else{
@@ -128,7 +128,7 @@ const HomePage = () => {
   // Handle movie deletion
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:3001/movies/${id}`);
+      await axios.delete(`${DATA_BASE_URL}/${id}`);
       setMovies(movies.filter(movie => movie.id !== id));
     } catch (error) {
       console.error("Error deleting movie:", error);

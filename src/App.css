@@ -1,0 +1,46 @@
+.App {
+  text-align: center;
+ background-color: #282c34;
+ color: aliceblue;
+}
+
+
+.movie-card:hover img {
+  transform: scale(1.05) !important;
+}
+
+.placeholder-image {
+  font-size: 48px;
+  background: linear-gradient(45deg, #6c757d, #495057);
+}
+
+/* Custom styling for slider navigation arrows */
+.slick-prev, .slick-next {
+  color: red; /* Set the color of the arrows to red */
+}
+
+.slick-prev:before, .slick-next:before {
+  color: red; /* Ensure the arrow icons inside the buttons are red */
+}
+
+/* Optional: Style the arrow buttons on hover */
+.slick-prev:hover, .slick-next:hover {
+  background-color: rgba(0, 0, 0, 0.5); /* Optional background color on hover */
+  border-radius: 50%; /* Optional: Make the button circular */
+  color: red; /* Ensure the arrows stay red on hover */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
